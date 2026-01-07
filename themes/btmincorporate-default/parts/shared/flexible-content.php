@@ -382,7 +382,7 @@
 
 	<?php elseif( get_row_layout() == 'click_expand' ): ?>
 
-		<section class="click-expand-module" id="click_expand<?php echo $i ?>">
+		<section class="click-expand-module <?php if( get_sub_field('cem_collapsed_tab')): ?>expand-all-enabled<?php endif; ?>" id="click_expand<?php echo $i ?>">
 			<div class="container <?php echo !empty(get_sub_field('container_padding')) ? get_sub_field('container_padding') : 'py-5' ?>">
 				<?php if( get_sub_field('section_header')): ?>
 					<h2><?php echo get_sub_field('section_header'); ?></h2>
@@ -2741,7 +2741,7 @@
 
 
 	<?php elseif( get_row_layout() == 'video_content_grid_module' ): ?>
-		<section class="video-content-grid-module">
+		<section class="video-content-grid-module <?php if( get_sub_field('module_showhide')): ?>d-none<?php endif; ?>">
 			<div class="container <?php echo !empty(get_sub_field('container_padding')) ? get_sub_field('container_padding') : 'py-5' ?>">
 				<div class="vcgm-top-content">
 					<div class="vcgmtc-left-content wow fadeInleft">

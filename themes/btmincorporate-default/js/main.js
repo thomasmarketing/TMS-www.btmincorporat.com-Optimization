@@ -1591,4 +1591,59 @@ $(document).ready(function(){
   });
 
 
+  $(document).ready(function () {
+
+  var $module = $('.click-expand-module.expand-all-enabled');
+
+  // Exit if class not present
+  if (!$module.length) return;
+
+  /* --------------------------------
+   * 1. Open all panels on load
+   * -------------------------------- */
+  $module.find('.collapse').each(function () {
+    $(this)
+      .addClass('show')
+      .removeAttr('data-parent')
+      .attr('aria-expanded', 'true');
+  });
+
+  $module.find('.card-header')
+    .removeClass('collapsed')
+    .attr('aria-expanded', 'true')
+    .find('.material-icons').text('remove');
+
+  /* --------------------------------
+   * 2. Override Bootstrap click
+   * -------------------------------- */
+  $module.on('click', '.card-header', function (e) {
+
+    // ⛔ Stop Bootstrap collapse
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    var $btn = $(this);
+    var target = $btn.attr('data-target');
+    var $panel = $(target);
+
+    var isOpen = $panel.hasClass('show');
+
+    if (isOpen) {
+      // Close only this panel
+      $panel.removeClass('show');
+      $btn
+        .addClass('collapsed')
+        .attr('aria-expanded', 'false')
+        .find('.material-icons').text('add');
+    } else {
+      // Open only this panel
+      $panel.addClass('show');
+      $btn
+        .removeClass('collapsed')
+        .attr('aria-expanded', 'true')
+        .find('.material-icons').text('remove');
+    }
+  });
+
+});
 }(jQuery));
