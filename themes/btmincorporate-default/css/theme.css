@@ -22206,6 +22206,21 @@ body .gform_legacy_markup_wrapper ul.gfield_radio li {
   border: 2px solid #fff;
 }
 
+.btn-primary-alt2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 30px;
+  border: 2px solid #000000;
+}
+.btn-primary-alt2:hover, .btn-primary-alt2:focus {
+  color: #fff;
+  background-color: #0140EF;
+  border: 2px solid #0140EF;
+}
+
 .full-width-rfq {
   font-size: 1.125rem;
   line-height: 1.5rem;
@@ -33416,5 +33431,147 @@ a.top-banner-close {
   .widget-area {
     margin-top: 1.25rem;
   }
+}
+
+@media (max-width: 768px) {
+  .custom-mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.si-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 101%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.si-video video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .indsutrie-served-defense-top {
+    margin-top: 8.3125rem;
+  }
+}
+/*============ Left Slider Right Content Module ===================*/
+.lsrcm-wrap {
+  /*padding: em(20);*/
+}
+@media (min-width: 768px) {
+  .lsrcm-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .lsrcm-img-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.lsrcm-img-wrap {
+  max-width: 25em;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.lsrcm-img-wrap a {
+  display: inline-block;
+}
+.lsrcm-img-wrap img {
+  margin: 0 auto;
+  display: block;
+  max-width: 21.875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 212px;
+}
+@media (min-width: 768px) {
+  .lsrcm-img-wrap {
+    max-width: inherit;
+    width: 30%;
+    margin: 0;
+  }
+  .lsrcm-img-wrap img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.lsrcm-content-wrap {
+  text-align: left;
+  padding: 0.9375rem;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .lsrcm-content-wrap {
+    padding: 1.25rem;
+    padding-left: 0;
+    padding-top: 0;
+    width: 65%;
+    text-align: left;
+  }
+}
+
+.lsrcm-slider .slick-dots li button {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #212121;
+  padding: 0;
+}
+
+.lsrcm-slider .slick-dots li.slick-active button {
+  background-color: #212121;
+  border: 1px solid #212122;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6px;
+}
+
+.left-slider-right-content-module .container {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=theme.css.map */

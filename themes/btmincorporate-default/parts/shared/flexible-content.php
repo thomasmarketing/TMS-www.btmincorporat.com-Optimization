@@ -4050,7 +4050,52 @@
         </div>
       </section>
 
+<?php elseif( get_row_layout() == 'left_slider_right_content_module' ): ?>
+		<section class="left-slider-right-content-module" id="left_slider_right_content_module<?php echo $i ?>" <?php if( get_sub_field('lsrcm_bg')): ?>style="background-color: <?php echo get_sub_field('lsrcm_bg');?>" <?php endif; ?>>
+			<div class="container <?php echo !empty(get_sub_field('container_padding')) ? get_sub_field('container_padding') : '' ?>">
+
+          				<?php if (get_sub_field('lsrcm_heading')): ?>
+				    		<h2 class="lsrcm-heading"><?php echo get_sub_field('lsrcm_heading'); ?></h2>
+				    	<?php endif ?>
+				<div class="lsrcm-wrap <?php if( get_sub_field('lsrcm_image_to_right')): ?> lsrcm-img-right<?php endif; ?>">
+          			<div class="lsrcm-img-wrap lsrcm-slider popup-gallery">
+          				<?php if( have_rows('lsrcm_items') ): while ( have_rows('lsrcm_items') ) : the_row(); ?>
+          					<div class="">
+          				<?php 
+						$image = get_sub_field('lsrcm_image');
+						if( !empty( $image ) ): ?>
+							<a href="<?php echo esc_url($image['url' ]); ?>">
+						    <img class="lsrcm-tab-img" src="<?php echo esc_url($image['url' ]); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['alt']); ?>" /></a>
+						<?php endif; ?>
+							</div>
+						<?php endwhile; endif; ?> 
+          			</div>
+
+          			<?php $animation = get_sub_field('animation_style') != 'none' ? get_sub_field('animation_style') . ' animated' : ''; ?>
+          			<div class="lsrcm-content-wrap wow <?php echo $animation; ?>">
+          				<?php if (get_sub_field('lsrcm_subheading')): ?>
+				    		<h3 class="lsrcm-subheading"><?php echo get_sub_field('lsrcm_subheading'); ?></h3>
+				    	<?php endif ?>
+          				<?php if (get_sub_field('lsrcm_content')): ?>
+				    		<span class="lsrcm-description"><?php echo get_sub_field('lsrcm_content'); ?></span>
+				    	<?php endif ?>
+
+				    	<?php 
+						$link = get_sub_field('lsrcm_cta');
+						if( $link ): 
+						    $link_url = $link['url'];
+						    $link_title = $link['title'];
+						    $link_target = $link['target'] ? $link['target'] : '_self';
+						    ?>
+						    <a class="button btn contact-btn btn-lg lsrcm-cta" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<?php endif; ?>
+          			</div>
+				</div>
+			</div>
+		</section>
+
 
 <?php endif; ?>
 <?php endwhile; echo '</section>'; ?>
 <?php endif; ?>
+

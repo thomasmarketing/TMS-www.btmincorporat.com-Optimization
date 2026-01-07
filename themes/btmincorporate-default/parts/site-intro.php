@@ -6,7 +6,15 @@
 			while ( have_rows('hero_slide') ) : the_row(); 
 				$count++;
 		?>
+		
 		<div class="si-item" <?php if (get_sub_field('hs_bg_img')): ?>style="background-image: url(<?php echo get_sub_field('hs_bg_img'); ?>);"<?php endif; ?>>
+			<div class="si-video">
+<?php if( get_sub_field('hs_bg_url') ): ?>
+<video autoplay loop muted playsinline width="100%">
+<source src="<?php echo esc_url( get_sub_field('hs_bg_url') ); ?>" type="video/mp4">
+</video>
+<?php endif; ?>
+</div>
 			<div class="si-overlay"></div>
 			<div class="container">
 				<div class="si-left wow fadeInLeft">

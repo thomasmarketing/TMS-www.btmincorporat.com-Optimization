@@ -24,7 +24,6 @@
                         ?>
                             <a class="<?php echo $socialclass; ?>" href="<?php echo esc_url(get_sub_field('sp_social_link')); ?>" target="_blank"  title="<?php echo get_sub_field('sp_social_profile'); ?>" rel="noreferrer noopener" aria-label="<?php echo get_sub_field('sp_social_profile'); ?>">
                         <?php endif ?>
-
                                <?php 
                                 $image = get_sub_field('sp_icon');
                                 if( !empty( $image ) ): ?>

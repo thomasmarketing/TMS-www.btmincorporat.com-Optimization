@@ -120,7 +120,7 @@
 							    $rfq_link_title = $rfq_link['title'];
 							    $rfq_link_target = $rfq_link['target'] ? $rfq_link['target'] : '_self';
 							    ?>
-							    <a class="btn btn-primary d-none d-xl-inline-block m-0" href="<?php echo esc_url( $rfq_link_url ); ?>" target="<?php echo esc_attr( $rfq_link_target ); ?>"><?php echo esc_html( $rfq_link_title ); ?></a>
+							    <a class="btn btn-primary-alt2 d-none d-xl-inline-block m-0" href="<?php echo esc_url( $rfq_link_url ); ?>" target="<?php echo esc_attr( $rfq_link_target ); ?>"><?php echo esc_html( $rfq_link_title ); ?></a>
 							    <a class="btn btn-secondary d-xl-none sh-rfq-mob-cta m-0" href="<?php echo esc_url( $rfq_link_url ); ?>" target="<?php echo esc_attr( $rfq_link_target ); ?>">RFQ</a>
 							<?php endif; ?>
 						</div>

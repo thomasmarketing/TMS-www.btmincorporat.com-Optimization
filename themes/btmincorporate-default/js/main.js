@@ -1566,4 +1566,29 @@ $('.rpm-items-wrap').slick({
     }
 });
 
+//lsrcm-slider Carousel
+$(document).ready(function(){
+ $('.lsrcm-slider').slick({
+    dots: true,
+    infinite: false,
+    arrows: false,
+    slidesToShow: 1,
+    autoplay:false,
+    fade: true,
+    prevArrow: '<a class="slick-prev" href="javascript:void(0)" aria-label="Previous">Prev</a>',
+    nextArrow: '<a class="slick-next" href="javascript:void(0)" aria-label="Next"></a>',
+    accessibility: true,
+  });
+  
+  //$('.tm-carousel .slick-dots li button').attr('tabindex', -1);
+
+  $('.lsrcm-slider .slick-dots li button').on('click contextmenu drag auxclick',function() {
+    $('a, button, input').removeClass('tse-remove-border');
+    $(this).addClass('tse-remove-border');
+  }).on('blur', function() {
+    $(this).removeClass('tse-remove-border');
+  });
+  });
+
+
 }(jQuery));

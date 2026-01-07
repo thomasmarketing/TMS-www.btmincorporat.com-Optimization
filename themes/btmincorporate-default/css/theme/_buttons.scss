@@ -133,6 +133,22 @@
   }
 }
 
+.btn-primary-alt2 {
+  font-size: rem(18);
+  line-height: rem(24);
+  font-weight: 600;
+  background-color: $primary;
+  color: $white;
+  border-radius: 30px;
+  border:2px solid $primary;
+  &:hover,
+  &:focus{
+     color: $white;
+     background-color: $blue;
+     border:2px solid $blue;
+  }
+}
+
 .full-width-rfq{
   font-size: rem(18);
   line-height: rem(24);
