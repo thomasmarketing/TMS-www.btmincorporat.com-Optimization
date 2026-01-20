@@ -32,9 +32,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container">
 
-				<?php if ( 'container' == $container ) : ?>
-					<div class="container">
-				<?php endif; ?>
+			
 
 						<!-- Your site title as branding in the menu -->
 						<?php $logo = get_field('global_company_logo','option'); ?>
@@ -128,9 +126,7 @@
 
 						
 
-					<?php if ( 'container' == $container ) : ?>
-					</div><!-- .container -->
-					<?php endif; ?>
+				
 			</div>
 		</nav>
 	</div>
