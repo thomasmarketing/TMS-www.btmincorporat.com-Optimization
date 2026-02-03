@@ -33585,4 +33585,67 @@ a.top-banner-close {
 .si-pgintions-arrows {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .si-description {
+    min-height: 45px;
+  }
+  .si-description {
+    -webkit-animation: none !important;
+            animation: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .site-logo img {
+    aspect-ratio: 157/80;
+    max-width: 157px;
+    width: 100%;
+    height: auto;
+  }
+  #who-we-are img {
+    aspect-ratio: 1/1; /* adjust if not square */
+    width: 100%;
+    height: auto;
+  }
+  #who-we-are {
+    min-height: 250px; /* adjust based on content */
+  }
+  #who-we-are img[src*="11.png"] {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+  }
+  #who-we-are img[src*="11"],
+  #who-we-are img[src*="22"] {
+    aspect-ratio: 4/3; /* matches 1108x800 */
+    width: 100%;
+    height: auto;
+  }
+  /* Logo */
+  img[src*=Adobe-Express-file-1] {
+    aspect-ratio: 157/80;
+    max-width: 157px;
+    height: auto;
+  }
+  /* SVG service icons */
+  .ilb-image,
+  img[src$=".svg"] {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+  }
+  /* Social icons */
+  img[src*=ico-facebook] {
+    aspect-ratio: 14/26;
+    width: 14px;
+    height: auto;
+  }
+  /* Thomas badge (external) */
+  .tn-badge__img {
+    aspect-ratio: 92/93;
+    width: 92px;
+    height: auto;
+  }
+}
 /*# sourceMappingURL=theme.css.map */
